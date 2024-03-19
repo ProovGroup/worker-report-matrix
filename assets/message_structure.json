@@ -1,0 +1,35 @@
+{
+	"Source": {
+		"Path": {
+			"Region": "",
+			"Bucket": "",
+			"Key": ""
+		},
+		"Options": {
+			"Type": "Archive"
+		}
+	},
+	"Destination": {
+		"Path": {
+			"Region": "",
+			"Bucket": "",
+			"Key": ""
+		},
+		"Options": {
+			"PDFOptions": {
+				"Margin": {
+					"Top": "20px",
+					"Right": "50px",
+					"Bottom": "100px",
+					"Left": "50px"
+				}
+			}
+		}
+	},
+	"DataSource": {
+		"Content": null,
+		"Options": {
+			"Type": "Content"
+		}
+	}
+}
