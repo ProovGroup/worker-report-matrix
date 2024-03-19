@@ -17,11 +17,11 @@ La propriété `proov_code` permet de récupérer toutes les informations néces
 
 # Configuration
 
-Le dossier `./config` contient la structure de base du message qui est envoyé par cette lambda à la file `{env}-pdf-matrix`
+Le dossier `./assets` contient la structure de base du message qui est envoyé par cette lambda à la file `{env}-pdf-matrix`
 
 Elle se construit de la manière suivante:
 
-`./config/message_structure.json`
+`./assets/message_structure.json`
 ```json
 {
   "Source": {
