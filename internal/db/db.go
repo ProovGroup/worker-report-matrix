@@ -30,6 +30,7 @@ const QUERY = `SELECT row_to_json(matrix)
 						cache_address_geoloc cag
 					WHERE 
 						cag.latitude = CAST(r.geoloc->>'latitude' AS float8) and cag.longitude = CAST(r.geoloc->>'longitude' AS float8)
+					LIMIT 1
 				) AS cag
 			) AS geoloc,
 			(SELECT COALESCE(array_to_json(array_agg(row_to_json(parts))), '[]') 
