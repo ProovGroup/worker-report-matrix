@@ -8,7 +8,7 @@ lambda: clean
 	@cd ./bin && zip $(SERVICE_NAME).zip ./assets/* bootstrap
 
 deploy: lambda
-	$(eval VERSION = $(shell aws lambda update-function-code --function-name ${SERVICE_NAME} --region ${REGION} --zip-file fileb://bin/$(SERVICE_NAME).zip --publish |  python -c "import sys, json; print json.load(sys.stdin)['Version']"))
+	$(eval VERSION = $(shell aws lambda update-function-code --function-name ${SERVICE_NAME} --region ${REGION} --zip-file fileb://bin/$(SERVICE_NAME).zip --publish |  jq .Version))
 	@aws lambda update-alias --function-name ${SERVICE_NAME} --region ${REGION} --name ${ENV} --function-version $(VERSION)
 
 clean:
