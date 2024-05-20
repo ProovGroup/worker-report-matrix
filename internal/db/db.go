@@ -55,6 +55,7 @@ const QUERY = `SELECT row_to_json(matrix)
 				FROM (
 					SELECT 
 						ps.name,
+						get_local_or_en(ps.title, 'fr') AS title,
 						(SELECT row_to_json(pic)
 							FROM (
 								SELECT
